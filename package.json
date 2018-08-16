@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev-start": "webpack-dev-server --open --config webpack.dev.js",
-    "start": "open ./dist/index.html",
+    "start": "node index.js",
     "dev": "webpack --mode development",
     "build": "webpack --config webpack.prod.js"
   },
@@ -41,6 +40,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "express": "^4.16.3",
     "lodash": "^4.17.10",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
