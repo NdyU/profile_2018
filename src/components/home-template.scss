@@ -1,0 +1,47 @@
+
+.hp-ctn {
+  height: 100%;
+  display: grid;
+
+  grid-template:
+            "ctn1 ctn2 ctn3"
+            "ctn4 main ctn5"
+            "ctn6 ctn7 ctn8";
+  grid-template-rows: 30% auto 30%;
+  grid-template-columns: 30% auto 30%;
+}
+
+.main-content {
+  display: grid;
+  grid-area: main;
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+}
+
+#ctn1, #ctn2, #ctn3, #ctn4, #ctn5, #ctn6, #ctn7 {
+  position: relative;
+}
+#ctn1 {
+  grid-area: ctn1;
+}
+#ctn2 {
+  grid-area: ctn2;
+}
+#ctn3 {
+  grid-area: ctn3;
+}
+#ctn4 {
+  grid-area: ctn4;
+}
+#ctn5 {
+  grid-area: ctn5;
+}
+#ctn6 {
+  grid-area: ctn6;
+}
+#ctn7 {
+  grid-area: ctn7;
+}
+#ctn8 {
+  grid-area: ctn8;
+}

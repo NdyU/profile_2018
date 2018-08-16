@@ -1,0 +1,329 @@
+a {
+  color: #707070;
+  text-decoration: none;
+}
+.hp-ctn {
+  color: #707070;
+  perspective: 2000px;
+  position: relative;
+  height: inherit;
+  width: inherit;
+}
+.name {
+  font-size: 108px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.btn-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-list > .btn {
+  font-size: 26px;
+  margin-left: 20px;
+  padding: 10px;
+  background-color: white;
+  transition: margin 0.5s ease-out;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn:focus {
+  margin-top: -20px;
+  // transform: rotateX(10deg);
+  box-shadow: 2px 2px #707070;
+}
+
+.project-btn {
+  background-color: #FFDD22 !important;
+}
+.profile-btn {
+  background-color: #7BFFEB !important;
+}
+.contact-btn {
+  background-color: #DB7BFF !important;
+}
+
+/*
+Code for styling the Source Box
+ */
+
+.source-box {
+  position: absolute;
+  box-sizing: border-box;
+  right: 0px;
+  display: block;
+}
+
+.item {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 100px;
+  margin: 40px 20px 40px 20px;
+  transition: background-color 1s;
+}
+.item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  transition: box-shadow 1s;
+  transform-origin: center;
+}
+.item:hover::before {
+  // animation: rotate360 1s;
+  box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+}
+
+@keyframes rotate360 {
+  from {
+    left: 0%;
+    transform: rotateY(0deg);
+  }
+  to {
+    left:0%;
+    transform: rotateY(360deg);
+  }
+}
+/*
+Code for styling the Project View
+ */
+.pj-ctn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.pj-btn {
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  // animation-name: shake;
+  // animation-iteration-count: infinite;
+  // animation-duration: 0.6s;
+  animation-iteration-count: 1;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  background-position: center;
+  background-size: cover;
+  transition: box-shadow 1s , transform 1s;
+  opacity: 0;
+}
+.pj-btn:hover {
+  box-shadow: 3px 3px rgba(0,0,0,.25);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+#ctn1 > .pj-btn {
+  animation-name: slideRight;
+}
+#ctn2 > .pj-btn {
+  animation-name: slideDown;
+  animation-delay: 0.4s;
+}
+#ctn3 > .pj-btn {
+  animation-name: slideLeft;
+  animation-delay: 0.8s;
+}
+#ctn4 > .pj-btn {
+  animation-name: slideRight;
+  animation-delay: 1.2s;
+}
+#ctn5 > .pj-btn {
+  animation-name: slideLeft;
+  animation-delay: 1.6s;
+}
+#ctn6 > .pj-btn {
+  animation-name: slideUp;
+  animation-delay: 2.0s;
+}
+#ctn7 > .pj-btn {
+  animation-name: slideUp;
+  animation-delay: 2.4s;
+}
+#ctn8 > .pj-btn {
+  animation-name: slideLeft;
+  animation-delay: 2.8s;
+}
+@keyframes shake {
+  from {
+    border-radius: 25px;
+  } to {
+    border-radius: 35px;
+  }
+}
+@keyframes slideDown {
+  from {
+    display: none;
+    opacity: 0;
+    margin-top: -30px;
+  } to {
+    display: block;
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+@keyframes slideUp {
+  from {
+    display: none;
+    opacity: 0;
+    margin-top: 30px;
+  } to {
+    display: block;
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+@keyframes slideRight {
+  from {
+    display: none;
+    opacity: 0;
+    margin-left: -30px;
+  } to {
+    display: block;
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+@keyframes slideLeft {
+  from {
+    display: none;
+    opacity: 0;
+    margin-left: 30px;
+  } to {
+    display: block;
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+
+/*
+Code for styling the profile view
+ */
+
+.section-ctn {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  animation: slideDown 1s;
+}
+.section-header {
+  text-align: center;
+}
+.section-header::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+.expr-list {
+  padding: 5px;
+  height: 100%;
+}
+.expr {
+  margin-left: 15px;
+  margin-top: 13px;
+  position: relative;
+  display: inline-flex;
+}
+.expr-btn {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+  background-color:  white;
+  overflow: hidden;
+  position: relative;
+}
+.expr-btn::before {
+  content: " ";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #433939;
+  width: 50%;
+  height: 50%;
+  opacity: 0;
+  transition: box-shadow 1s, transform 1.5s;
+  border-radius: 100px;
+}
+.expr-btn:hover::before {
+  opacity: 1;
+  box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.50);
+  transform: scale(5);
+}
+.expr-yr {
+  font-size: 8px;
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 5px;
+  top: 45px;
+  right: -10px;;
+  padding: 2px 8px 2px 8px;
+  background-color: white;
+  transition: width 1s ease-out;
+  width: 2.2em;
+  height: 1.1em;
+  overflow: hidden;
+  z-index: 2;
+}
+.expr-yr:hover {
+  animation: expandHorizontalFull 1s, expandVerticalFull 1s;
+  animation-delay: 0s, 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes expandVerticalFull {
+  from {
+    width: 100%
+  } to {
+    width: 100%;
+    height: 100%
+  }
+}
+@keyframes expandHorizontalFull {
+  to {
+    width: 100%
+  }
+}
+
+.expr-text:before {
+  content: '';
+  display: flex;
+  height: 1px;
+  width: 100%;
+  background-color: black;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.expr-text {
+  position: relative;
+  height: 100%;
+  overflow-x: auto;
+  overflow-wrap: normal;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
